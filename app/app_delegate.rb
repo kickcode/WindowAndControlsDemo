@@ -12,7 +12,9 @@ class AppDelegate
     @mainWindow.title = NSBundle.mainBundle.infoDictionary['CFBundleName']
     @mainWindow.orderFrontRegardless
 
-    @button = NSButton.alloc.initWithFrame([[0, 0], [150, 30]])
+    size = @mainWindow.frame.size
+    button_size = [150, 30]
+    @button = NSButton.alloc.initWithFrame([[(size.width / 2.0) - (button_size[0] / 2.0), (size.height / 2.0) - (button_size[1] / 2.0)], button_size])
     @button.title = "a test button"
     @mainWindow.contentView.addSubview @button
   end
