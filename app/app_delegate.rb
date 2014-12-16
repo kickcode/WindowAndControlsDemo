@@ -13,30 +13,13 @@ class AppDelegate
     @mainWindow.orderFrontRegardless
     @mainWindow.delegate = self
 
-    @label = NSTextField.alloc.initWithFrame(CGRectZero)
-    @label.bezeled = false
-    @label.drawsBackground = false
-    @label.editable = false
-    @label.selectable = false
-    @mainWindow.contentView.addSubview @label
+    @layout = MainLayout.new
+    @mainWindow.contentView = @layout.view
 
-    @button = NSButton.alloc.initWithFrame(CGRectZero)
-    self.set_button_frame
-    @button.title = "a test button"
+    @label = @layout.get(:label)
+    @button = @layout.get(:button)
     @button.target = self
     @button.action = 'button_pressed:'
-    @mainWindow.contentView.addSubview @button
-  end
-
-  def windowDidResize(notification)
-    self.set_button_frame
-  end
-
-  def set_button_frame
-    size = @mainWindow.frame.size
-    button_size = [150, 30]
-    @button.frame = [[(size.width / 2.0) - (button_size[0] / 2.0), (size.height / 2.0) - (button_size[1] / 2.0)], button_size]
-    @label.frame = [[(size.width / 2.0) - (button_size[0] / 2.0), (size.height / 2.0) - (button_size[1] / 2.0) - (button_size[1])], button_size]
   end
 
   def button_pressed(sender)
