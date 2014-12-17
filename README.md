@@ -16,6 +16,7 @@ Branches:
 
 * git clone https://github.com/kickcode/WindowAndControlsDemo.git && cd WindowAndControlsDemo
 * bundle install
+* git checkout <branch for tutorial>
 * rake
 
 ## Contributors
