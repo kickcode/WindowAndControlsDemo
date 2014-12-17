@@ -5,7 +5,7 @@ A RubyMotion OS X app that takes the default OS X skeleton app, and in different
 Branches:
 
 * master - default OS X skeleton app that other branches and tutorials are based off
-* basic - adding some basic controls (a button and a label via textfield), along with very simple interactivity, see: http://kickcode.com/blog/2014/12/17/how-to-build-a-basic-window-in-a-mac-os-x-app-with-rubymotion.html
+* basic - adding some basic controls (a button and a label via textfield), along with very simple interactivity, see: http://kickcode.com/blog/2014/12/17/how-to-setup-and-position-basic-controls-in-a-mac-os-x-app-window-with-rubymotion.html
 
 ## Requirements
 
