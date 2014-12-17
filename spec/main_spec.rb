@@ -1,4 +1,4 @@
-describe "Application 'BasicWindowAndControlsDemo'" do
+describe "Application 'WindowAndControlsDemo'" do
   before do
     @app = NSApplication.sharedApplication
   end

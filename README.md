@@ -1,8 +1,11 @@
-# BasicWindowAndControlsDemo
+# WindowAndControlsDemo
 
-A RubyMotion OS X app that takes the default OS X skeleton app, and adds some basic controls (a button and a label via textfield), along with very simple interactivity.
+A RubyMotion OS X app that takes the default OS X skeleton app, and in different branches adds user interface elements to demonstrate different ways of building up an application window, with varying complexity.
 
-For the accompanying tutorial, see: http://kickcode.com/blog/2014/12/17/how-to-build-a-basic-window-in-a-mac-os-x-app-with-rubymotion.html
+Branches:
+
+* master - default OS X skeleton app that other branches and tutorials are based off
+* basic - adding some basic controls (a button and a label via textfield), along with very simple interactivity, see: http://kickcode.com/blog/2014/12/17/how-to-build-a-basic-window-in-a-mac-os-x-app-with-rubymotion.html
 
 ## Requirements
 
@@ -11,7 +14,7 @@ For the accompanying tutorial, see: http://kickcode.com/blog/2014/12/17/how-to-b
 
 ## Setup
 
-* git clone https://github.com/kickcode/BasicWindowAndControlsDemo.git && cd BasicWindowAndControlsDemo
+* git clone https://github.com/kickcode/WindowAndControlsDemo.git && cd WindowAndControlsDemo
 * bundle install
 * rake
 
