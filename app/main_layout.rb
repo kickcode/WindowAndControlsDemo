@@ -1,23 +1,59 @@
 class MainLayout < MotionKit::Layout
   SIZE = [150, 30]
 
-  view :button, :label
-
   def layout
-    add NSButton, :button do
-      title "a test button"
-      size SIZE
-      autoresizing_mask :pin_to_center
-      frame from_center
+    add NSTextField, :num1 do
+      deferred do
+        constraints do
+          right.equals(:separator, :left).minus(10)
+          top.equals(:separator, :top).minus(5)
+          size [50, 30]
+        end
+      end
     end
-    add NSTextField, :label do
+    add NSTextField, :separator do
+      stringValue "+"
       bezeled false
       drawsBackground false
       editable false
       selectable false
-      size SIZE
+      size_to_fit
       autoresizing_mask :pin_to_center
-      frame from_center(up: 3)
+      frame from_center
+    end
+    add NSTextField, :num2 do
+      deferred do
+        constraints do
+          left.equals(:separator, :right).plus(10)
+          top.equals(:separator, :top).minus(5)
+          size [50, 30]
+        end
+      end
+    end
+
+    add NSButton, :calculate do
+      deferred do
+        title "Calculate"
+        size_to_fit
+        constraints do
+          top.equals(:separator, :bottom).plus(10)
+          left.equals(:separator, :left).minus(25)
+        end
+      end
+    end
+
+    add NSTextField, :result do
+      bezeled false
+      drawsBackground false
+      editable false
+      selectable false
+      size_to_fit
+      deferred do
+        constraints do
+          top.equals(:calculate, :bottom).plus(10)
+          left.equals(:separator, :left)
+        end
+      end
     end
   end
 end

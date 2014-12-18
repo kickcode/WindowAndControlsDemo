@@ -16,16 +16,15 @@ class AppDelegate
     @layout = MainLayout.new
     @mainWindow.contentView = @layout.view
 
-    @label = @layout.get(:label)
-    @button = @layout.get(:button)
-    @button.target = self
-    @button.action = 'button_pressed:'
+    @num1 = @layout.get(:num1)
+    @num2 = @layout.get(:num2)
+    @calculate = @layout.get(:calculate)
+    @calculate.target = self
+    @calculate.action = 'calculate_result:'
+    @result = @layout.get(:result)
   end
 
-  def button_pressed(sender)
-    @taps ||= 0
-    @taps += 1
-
-    @label.stringValue = "#{@taps} presses"
+  def calculate_result(sender)
+    @result.stringValue = (@num1.stringValue.to_i + @num2.stringValue.to_i).to_s
   end
 end
